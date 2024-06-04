@@ -96,6 +96,7 @@ main .clients .card:hover{
     position: relative;
     width: 140px;
     margin-left: 5px;
+    padding: 4px;
 }
 .clients .card .img .img-tag {
     width: 50px;
@@ -306,7 +307,7 @@ main .clients .card:hover{
 }
 @media(max-width: 700px){
     main .filter-list{
-        width: 96%;
+        width: 94%;
     }
     main .list-clients{
         width: 200px;
@@ -323,9 +324,14 @@ main .clients .card:hover{
         width: 100%;
     }
 }
+@media(max-width: 650px){
+    main .filter-list{
+        width: 97%;
+    }
+}
 @media(max-width: 600px){
     main .filter-list{
-        width: 84%;
+        width: 83%;
     }
     main .filter-menu {
         width: 80dvw;
@@ -346,9 +352,19 @@ main .clients .card:hover{
         margin: 0 auto;
     }
 }
+@media (max-width: 570px){
+    main .filter-list{
+        width: 88%;
+    }
+}
 @media (max-width: 550px){
     main .filter-list{
-        width: 94%;
+        width: 92%;
+    }
+}
+@media (max-width: 520px){
+    main .filter-list{
+        width: 98%;
     }
 }
 @media(max-width: 500px){
@@ -362,14 +378,19 @@ main .clients .card:hover{
         width: 87dvw;
     }
 }
+@media (max-width: 470px){
+    main .filter-list{
+        width: 86%;
+    }
+}
 @media (max-width: 440px){
     main .filter-list{
-        width: 95%;
+        width: 92%;
     }
 }
 @media(max-width: 415px){
     main .filter-list{
-        width: 98%;
+        width: 97%;
     }
     main .filter-menu {
         width: 86dvw;
@@ -419,6 +440,11 @@ main .clients .card:hover{
 @media (max-width: 345px){
     main .filter-list{
         width: 90%;
+    }
+}
+@media (max-width: 330px){
+    main .filter-list{
+        width: 96%;
     }
 }
 
