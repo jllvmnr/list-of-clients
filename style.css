@@ -1,0 +1,425 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.greenText{
+    color: #3CB371;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    padding: 20px;
+}
+main .filter-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+main .list-clients{
+    width: 170px;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 20px 200px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #3CB371;
+    border-bottom: 1px solid #3CB371;
+}
+main .filter{
+    display: none;
+    color: #3CB371;
+    padding: 10px 50px 0 0;
+    cursor: pointer;
+}
+main .filter-menu{
+    display: none;
+    position: relative;
+}
+main .filter-menu .inactive-filter{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #3CB371;
+    font-size: 20px;
+    cursor: pointer;
+}
+main .title{
+    width: 1150px;
+    height: 45px;
+    display: grid;
+    grid-template-columns: 152px 210px 240px 430px 118px;
+    border-bottom: 1px solid #dcdcdc; 
+}
+main a{
+    text-decoration: none;
+    color: #000;
+}
+main .clients{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main .clients .card{
+    width: 1150px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+main .clients .card:hover{
+    background-color: #F8F8F8;
+}
+.clients .card .img-fio{
+    width: 45%;  
+    display: flex;
+    align-items: center;
+}
+.clients .card .img{
+    position: relative;
+    width: 140px;
+}
+.clients .card .img .img-tag {
+    width: 50px;
+    height: 50px;
+    overflow:hidden;
+    border-radius: 50%;
+}
+.clients .card .img .img-tag img {
+    width: 100%;
+}
+.clients .card .img .counter {
+    position: absolute;
+    top: 60%;
+    left: calc(30px);
+    background: #3CB371;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+}
+.clients .card .fio-phone{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+.clients .card .description{
+    max-width: 350px;
+    max-height: 50px;
+    overflow: auto;
+}
+.description::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.description::-webkit-scrollbar-thumb {
+    background: #dcdcdc;
+    border-radius: 5px;
+}
+.clients .card .credit{
+    width: 120px;
+}
+
+
+@media(max-width:1200px){
+    .container{
+        width: 1100px;
+    }
+    .title, .card{
+        scale: 0.9;
+        margin-left: -5%;
+    }
+}
+@media(max-width:1100px){
+    .container{
+        width: 1000px;
+    }
+    .list-clients{
+        scale: 0.9;
+    }
+    .title, .card{
+        scale: 0.82;
+        margin-left: -10%;
+    }
+}
+@media(max-width:1000px){
+    .container{
+        width: 900px;
+    }
+    .list-clients{
+        scale: 0.65;
+    }
+    .title, .card{
+        scale: 0.7;
+    }
+    .title, .card{
+        margin-left: -16%;
+    }
+}
+@media(max-width:900px){
+    .container{
+        width: 800px;
+    }
+    .list-clients{
+        margin-left: -20px;
+    }
+    .title, .card{
+        scale: 0.65;
+        margin-left: -25%;
+    }
+    .card{
+        margin-bottom: -2%;
+    }
+}
+@media(max-width: 800px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    main .filter-list{
+        width: 92%;
+    }
+    main .filter {
+        display: block;
+        padding: 0;
+    }
+    main .filter-menu {
+        display: block;
+        height: 90dvh;
+        width: 85dvw;
+        position: absolute;
+        top: -100vh; 
+        overflow: auto;
+        background: #F8F8F8;
+        border-radius: 15px 15px 0 0;
+        z-index: 1;
+        -webkit-box-shadow: 0 2px 12px 2.5px #dddddd;
+        -moz-box-shadow: 0 2px 12px 2.5px #dddddd;
+        box-shadow: 0 2px 12px 2.5px #dddddd;
+        transition: 0.8s; 
+    }
+    @keyframes slideUp {
+        from {
+            top: -100vh; 
+        }
+        to {
+            top: 65px; 
+        }
+    }
+    @keyframes slideDown {
+        from {
+            top: 65px; 
+        }
+        to {
+            top: -100vh; 
+        }
+    }
+    .filter-menu.active {
+        animation: slideUp 0.8s forwards; 
+    }
+    .filter-menu.inactive {
+        animation: slideDown 0.8s forwards; 
+    }
+    .inactive-filter.inactive{
+        animation: slideDown 0.8s forwards; 
+    }
+
+    main .title, .card {
+        scale: 1;
+        margin-left: 0;
+    }
+    main .title {
+        display: none;
+    }
+    main .clients {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        box-sizing: border-box;
+    }
+    main .clients .card {
+        width: 300px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    .clients .card .img-fio {
+        width: 100%;
+        gap: 10px;
+    }
+    .clients .card .img {
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+    .clients .card .fio-phone {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .clients .card .description {
+        width: 100%;
+        max-height: 50px;
+        overflow: auto;
+        text-align: center;
+    }
+    .clients .card .credit {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width:770px){
+    main .filter-list{
+        width: 95%;
+    }
+    main .filter{
+        padding-right: 10px;
+    }
+}
+@media(max-width: 700px){
+    main .filter-list{
+        width: 96%;
+    }
+    main .list-clients{
+        width: 200px;
+        scale: 0.8;
+    }
+    main .filter-menu {
+        width: 89dvw;
+    }
+    main .clients .card{
+        width: 280px;
+        height: 170px;
+    }
+    .clients .card .img-fio{
+        width: 100%;
+    }
+}
+@media(max-width: 600px){
+    main .filter-list{
+        width: 84%;
+    }
+    main .filter-menu {
+        width: 80dvw;
+    }
+    main .clients {
+        grid-template-columns: repeat(1,1fr);
+    }
+    main .clients .card{
+        width: 450px;
+        height: 130px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .clients .card .fio-phone{
+        flex-direction: row;
+    }
+    .clients .card .description{
+        margin: 0 auto;
+    }
+}
+@media(max-width: 500px){
+    main .filter-list{
+        width: 80%;
+    }
+    main .clients .card{
+        width: 350px;
+    }
+    main .filter-menu {
+        width: 87dvw;
+    }
+}
+@media (max-width: 550px){
+    main .filter-list{
+        width: 94%;
+    }
+}
+@media (max-width: 440px){
+    main .filter-list{
+        width: 95%;
+    }
+}
+@media(max-width: 415px){
+    main .filter-list{
+        width: 98%;
+    }
+    main .filter-menu {
+        width: 86dvw;
+    }
+    main .list-clients{
+        scale: 0.8;
+    }
+    .clients .card .fio-phone{
+        flex-direction: column;
+        padding-left: 10px;
+    }
+}
+@media(max-width: 395px){
+    main .clients .card{
+        width: 320px;
+    }
+}
+@media(max-width: 380px){
+    main .filter-list{
+        width: 80%;
+    }
+    main .filter-menu {
+        width: 70dvw;
+    }
+    main .clients .card{
+        width: 250px;
+    }
+    .clients .card .fio-phone{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (max-width: 350px){
+    main .filter-list{
+        width: 100%;
+    }
+    main .filter-menu {
+        width: 80dvw;
+    }
+    main .filter{
+        margin-top: -15px;
+    }
+    main .list-clients{
+        margin-left: -15px;
+    }
+}
+@media (max-width: 345px){
+    main .filter-list{
+        width: 90%;
+    }
+}
+
+
+

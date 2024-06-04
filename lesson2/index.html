@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: teal;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color:white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        header .menu {
+            display: flex;
+            gap:20px;
+        }
+
+        header .menu a {
+            color: white;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            padding: 0 20px;
+        }
+
+        header .bars {
+            width: 40px;
+            height: 30px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        header .bars span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transition: 0.5s;
+
+            position: relative;
+        }
+
+        header .bars span::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            position: absolute;
+            background: white;
+            top: -8px;
+            transition: 0.5s;
+
+        }
+
+        header .bars span::before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            position: absolute;
+            background: white;
+            top: 8px;
+            transition: 0.1s;
+
+        }
+
+        @media (max-width:778px) {
+            header .bars {
+                display: flex;
+            }
+            .menu {
+                transition: 0.6s;
+                position: absolute;
+                flex-direction: column;
+                height: 90dvh;
+                width: 90dvw;
+                left: -180dvh;
+                top:50px;
+                overflow: auto;
+                background: teal;
+
+            }
+            .menu a {
+                display: block;
+                padding: 20px;
+                border-bottom: 1px solid white;
+            }
+
+            .menu.active {
+                top:50px;
+                left: 0;
+            }
+
+            header .bars.active span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            transform: rotate(45deg);
+            position: relative;
+            transition: 0.5s;
+        }
+
+        header .bars.active span::after {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            position: absolute;
+            background: white;
+            top: 0px;
+            transition: 0.5s;
+
+            transform: rotate(-95deg);
+        }
+
+        header .bars.active span::before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: block;
+            position: absolute;
+            background: white;
+            top: 8px;
+            opacity: 0;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Logo
+        </div>
+        <div class="menu">
+            <a href="">home1</a>
+            <a href="">home2</a>
+            <a href="">home3</a>
+            <a href="">home4</a>
+            <a href="">home5</a>
+        </div>
+        <div class="bars" onclick="showMenu()">
+            <span></span>
+        </div>
+    </header>
+
+    <script>
+        function showMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+            document.querySelector('.bars').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
