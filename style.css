@@ -178,6 +178,9 @@ main .clients .card:hover{
     .title, .card{
         margin-left: -16%;
     }
+    .card{
+        margin-bottom: -10px;
+    }
 }
 @media(max-width:900px){
     .container{
@@ -200,7 +203,7 @@ main .clients .card:hover{
         padding: 0 10px;
     }
     main .filter-list{
-        width: 92%;
+        width: 100%;
     }
     main .filter {
         display: block;
@@ -209,7 +212,7 @@ main .clients .card:hover{
     main .filter-menu {
         display: block;
         height: 90dvh;
-        width: 85dvw;
+        width: 92dvw;
         position: absolute;
         top: -100vh; 
         overflow: auto;
@@ -262,7 +265,7 @@ main .clients .card:hover{
         box-sizing: border-box;
     }
     main .clients .card {
-        width: 300px;
+        width: 350px;
         height: 150px;
         display: flex;
         flex-direction: column;
@@ -280,6 +283,10 @@ main .clients .card:hover{
         position: relative;
         width: 50px;
         height: 50px;
+        padding: 0;
+    }
+    .clients .card .img .counter{
+        top: 65%;
     }
     .clients .card .fio-phone {
         display: flex;
@@ -299,10 +306,21 @@ main .clients .card:hover{
 }
 @media (max-width:770px){
     main .filter-list{
-        width: 95%;
+        width: 100%;
     }
     main .filter{
         padding-right: 10px;
+    }
+    main .clients .card{
+        width: 330px;
+    }
+}
+@media (max-width:720px){
+    main .filter-list{
+        width: 100%;
+    }
+    main .clients .card{
+        width: 310px;
     }
 }
 @media(max-width: 700px){
@@ -314,7 +332,8 @@ main .clients .card:hover{
         scale: 0.8;
     }
     main .filter-menu {
-        width: 89dvw;
+        width: 88dvw;
+        margin-left: -5px;
     }
     main .clients .card{
         width: 280px;
@@ -328,13 +347,16 @@ main .clients .card:hover{
     main .filter-list{
         width: 97%;
     }
+    main .filter-menu {
+        width: 90dvw;
+    }
 }
 @media(max-width: 600px){
     main .filter-list{
         width: 83%;
     }
     main .filter-menu {
-        width: 80dvw;
+        width: 86dvw;
     }
     main .clients {
         grid-template-columns: repeat(1,1fr);
@@ -352,9 +374,18 @@ main .clients .card:hover{
         margin: 0 auto;
     }
 }
+@media (max-width: 580px){
+    main .filter-list{
+        width: 87%;
+    }
+}
 @media (max-width: 570px){
     main .filter-list{
         width: 88%;
+    }
+    main .filter-menu{
+        width: 84dvw;
+        margin-left: -10px;
     }
 }
 @media (max-width: 550px){
@@ -363,16 +394,19 @@ main .clients .card:hover{
     }
 }
 @media (max-width: 520px){
+    main .filter-menu{
+        width: 90dvw;
+    }
     main .filter-list{
         width: 98%;
     }
 }
 @media(max-width: 500px){
     main .filter-list{
-        width: 80%;
+        width: 95%;
     }
     main .clients .card{
-        width: 350px;
+        width: 420px;
     }
     main .filter-menu {
         width: 87dvw;
@@ -380,12 +414,20 @@ main .clients .card:hover{
 }
 @media (max-width: 470px){
     main .filter-list{
-        width: 86%;
+        width: 97%;
+    }
+    main .clients .card{
+        width: 400px;
     }
 }
 @media (max-width: 440px){
-    main .filter-list{
-        width: 92%;
+    main .clients .card{
+        width: 380px;
+    }
+}
+@media (max-width: 430px){
+    main .clients .card{
+        width: 360px;
     }
 }
 @media(max-width: 415px){
@@ -393,10 +435,13 @@ main .clients .card:hover{
         width: 97%;
     }
     main .filter-menu {
-        width: 86dvw;
+        width: 87dvw;
     }
     main .list-clients{
         scale: 0.8;
+    }
+    main .clients .card{
+        width: 350px;
     }
     .clients .card .fio-phone{
         flex-direction: column;
@@ -405,46 +450,54 @@ main .clients .card:hover{
 }
 @media(max-width: 395px){
     main .clients .card{
-        width: 320px;
+        width: 330px;
     }
 }
 @media(max-width: 380px){
     main .filter-list{
-        width: 80%;
+        width: 96%;
     }
     main .filter-menu {
-        width: 70dvw;
+        width: 86dvw;
     }
     main .clients .card{
-        width: 250px;
+        width: 310px;
     }
     .clients .card .fio-phone{
         display: grid;
         grid-template-columns: repeat(1,1fr);
     }
 }
+@media (max-width: 360px){
+    main .clients .card{
+        width: 300px;
+    }
+}
 @media (max-width: 350px){
     main .filter-list{
-        width: 100%;
+        width: 98%;
     }
     main .filter-menu {
-        width: 80dvw;
+        width: 85dvw;
     }
     main .filter{
         margin-top: -15px;
     }
-    main .list-clients{
-        margin-left: -15px;
-    }
-}
-@media (max-width: 345px){
-    main .filter-list{
-        width: 90%;
+    main .clients .card{
+        width: 280px;
     }
 }
 @media (max-width: 330px){
     main .filter-list{
         width: 96%;
+    }
+    main .clients .card{
+        width: 270px;
+    }
+}
+@media (max-width: 320px){
+    main .clients .card{
+        width: 250px;
     }
 }
 
