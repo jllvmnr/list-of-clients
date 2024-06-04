@@ -95,6 +95,7 @@ main .clients .card:hover{
 .clients .card .img{
     position: relative;
     width: 140px;
+    margin-left: 5px;
 }
 .clients .card .img .img-tag {
     width: 50px;
@@ -345,6 +346,11 @@ main .clients .card:hover{
         margin: 0 auto;
     }
 }
+@media (max-width: 550px){
+    main .filter-list{
+        width: 94%;
+    }
+}
 @media(max-width: 500px){
     main .filter-list{
         width: 80%;
@@ -354,11 +360,6 @@ main .clients .card:hover{
     }
     main .filter-menu {
         width: 87dvw;
-    }
-}
-@media (max-width: 550px){
-    main .filter-list{
-        width: 94%;
     }
 }
 @media (max-width: 440px){
